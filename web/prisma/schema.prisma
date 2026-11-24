@@ -2,12 +2,15 @@
 // תוספת: Provider (ספקים שהמנהלת מוסיפה מתוך המערכת), Customer.is_active (ארכוב לקוח עם הזמנות)
 
 generator client {
-  provider = "prisma-client-js"
+  provider      = "prisma-client-js"
+  // rhel-openssl-3.0.x – השרתים של Netlify
+  binaryTargets = ["native", "rhel-openssl-3.0.x"]
 }
 
 datasource db {
   provider = "postgresql"
-  url      = env("DATABASE_URL")
+  url       = env("DATABASE_URL") // חיבור מאוגם (pooled) – לאתר
+  directUrl = env("DIRECT_URL")   // חיבור ישיר – למיגרציות
 }
 
 enum StaffRole {

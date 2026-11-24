@@ -27,10 +27,10 @@
 | אימות | Cookie חתום (JWT, ספריית jose) | שני סוגי משתמשים: `Customer` ו-`StaffUser`; סיסמאות ב-bcrypt (PRD §8) |
 | ולידציה | Zod | אותן סכמות בטפסים ובשרת |
 | עיצוב | Tailwind CSS | `<html lang="he" dir="rtl">`, פונט Heebo, צבעים מהסטוריבורד: `#0E6E73` (ראשי), `#14202B` (כהה), `#F5F7F7` (רקע) |
-| תמונות | אחסון S3 / Cloudflare R2 | URL נשמר ב-`ProductImage.image_url` |
+| תמונות | Netlify Blobs | URL נשמר ב-`ProductImage.image_url` |
 | בדיקות | Vitest (לוגיקה) + Playwright (E2E) | |
 | CI | GitHub Actions | lint, typecheck, בדיקות, build |
-| אירוח | Vercel / Railway + Postgres מנוהל | סביבות staging ו-production |
+| אירוח | **Netlify** + PostgreSQL ב-**Neon** | תמונות ב-Netlify Blobs |
 
 ### מבנה תיקיות
 
@@ -238,7 +238,7 @@ tests/
 | 4 – ניהול הזמנות ולקוחות | ✅ רשימה וסינון, סטטוסים, תשלום, משלוח, לקוחות ותנאי תשלום |
 | 5 – אינטגרציות | 🟡 מסך ספקים + ממשקים ומימוש מדומה. ⏳ חיבור לספקים אמיתיים |
 | 6 – דוחות ועובדים | ✅ דשבורד, דוחות מכירות ומלאי נמוך, ניהול עובדים והרשאות |
-| 7 – איכות והשקה | 🟡 בדיקות יחידה ואינטגרציה, בדיקת דפדפן ידנית. ⏳ אחסון תמונות בענן, אבטחה (rate-limit), דומיין והעלאה לאוויר |
+| 7 – איכות והשקה | 🟡 בדיקות יחידה ואינטגרציה, בדיקת דפדפן ידנית, הקוד מוכן ל-Netlify (Neon + Netlify Blobs). ⏳ פתיחת חשבונות ו-deploy, אבטחה (rate-limit), דומיין |
 
 ---
 

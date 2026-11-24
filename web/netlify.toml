@@ -1,0 +1,6 @@
+# הגדרות Netlify. ב-Netlify יש לבחור Base directory = web
+[build]
+  command = "npx prisma migrate deploy && npm run db:seed && npm run build"
+
+[build.environment]
+  NODE_VERSION = "22"

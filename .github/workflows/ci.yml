@@ -22,6 +22,7 @@ jobs:
           --health-cmd "pg_isready -U galshanim" --health-interval 5s --health-timeout 5s --health-retries 10
     env:
       DATABASE_URL: postgresql://galshanim:galshanim@localhost:5432/galshanim
+      DIRECT_URL: postgresql://galshanim:galshanim@localhost:5432/galshanim
       SESSION_SECRET: ci-only-secret-0123456789-0123456789
     steps:
       - uses: actions/checkout@v4

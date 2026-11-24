@@ -16,16 +16,36 @@ const products = [
 
 async function main() {
   if ((await db.staffUser.count()) > 0) {
-    console.log("כבר קיימים נתונים – דילוג על seed");
+    console.log("כבר קיימים משתמשים – דילוג על seed");
     return;
   }
   const pw = (p: string) => bcrypt.hash(p, 12);
+  const demo = process.env.SEED_DEMO === "1";
+  const adminEmail = process.env.ADMIN_EMAIL?.trim().toLowerCase();
+  const adminPassword = process.env.ADMIN_PASSWORD;
 
-  await db.staffUser.createMany({
-    data: [
-      { full_name: "מנהלת המערכת", email: "admin@galshanim.local", password_hash: await pw("admin1234"), role: "admin" },
-      { full_name: "עובד מחסן", email: "warehouse@galshanim.local", password_hash: await pw("employee1234"), role: "employee", permissions: ["products", "orders"] },
-    ],
+  if (adminEmail && adminPassword) {
+    if (adminPassword.length < 8) throw new Error("ADMIN_PASSWORD צריך להכיל לפחות 8 תווים");
+    await db.staffUser.create({
+      data: { full_name: "מנהלת המערכת", email: adminEmail, password_hash: await pw(adminPassword), role: "admin" },
+    });
+    console.log(`נוצר משתמש מנהלת: ${adminEmail}`);
+  } else if (demo) {
+    await db.staffUser.create({
+      data: { full_name: "מנהלת המערכת", email: "admin@galshanim.local", password_hash: await pw("admin1234"), role: "admin" },
+    });
+  } else {
+    console.log("לא הוגדרו ADMIN_EMAIL ו-ADMIN_PASSWORD – לא נוצר משתמש מנהלת");
+    return;
+  }
+
+  if (!demo) {
+    console.log("seed הושלם (ללא נתוני דוגמה)");
+    return;
+  }
+
+  await db.staffUser.create({
+    data: { full_name: "עובד מחסן", email: "warehouse@galshanim.local", password_hash: await pw("employee1234"), role: "employee", permissions: ["products", "orders"] },
   });
 
   let stock = 3;
