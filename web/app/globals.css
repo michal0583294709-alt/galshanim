@@ -1,0 +1,81 @@
+@import "tailwindcss";
+
+@theme {
+  --color-brand: #0e6e73;
+  --color-brand-dark: #0a4f53;
+  --color-ink: #14202b;
+  --color-ink-2: #24343f;
+  --color-muted: #56636b;
+  --color-line: #e3e7e8;
+  --color-line-2: #d5dbdd;
+  --color-surface: #f5f7f7;
+  --color-ok: #1f7a4d;
+  --color-warn: #a35a00;
+  --color-bad: #b42318;
+  --font-sans: "Heebo", system-ui, sans-serif;
+}
+
+body {
+  background: var(--color-surface);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+}
+
+@layer components {
+  .btn {
+    @apply inline-flex items-center justify-center gap-2 h-10 px-4 rounded-lg font-bold text-sm
+      bg-brand text-white border border-brand hover:bg-brand-dark transition-colors
+      disabled:opacity-50 disabled:cursor-not-allowed cursor-pointer;
+  }
+  .btn-secondary {
+    @apply inline-flex items-center justify-center gap-2 h-10 px-4 rounded-lg font-medium text-sm
+      bg-white text-ink border border-line-2 hover:bg-surface transition-colors cursor-pointer;
+  }
+  .btn-danger {
+    @apply inline-flex items-center justify-center gap-2 h-10 px-4 rounded-lg font-medium text-sm
+      bg-white text-bad border border-bad/40 hover:bg-bad/5 transition-colors cursor-pointer;
+  }
+  .btn-sm {
+    @apply h-8 px-3 text-xs;
+  }
+  .card {
+    @apply bg-white border border-line rounded-xl p-5;
+  }
+  .input {
+    @apply w-full h-10 px-3 rounded-lg border border-line-2 bg-white text-sm
+      focus:outline-none focus:ring-2 focus:ring-brand/30 focus:border-brand;
+  }
+  textarea.input {
+    @apply h-auto py-2;
+  }
+  .label {
+    @apply block text-sm font-medium mb-1 text-ink-2;
+  }
+  .table {
+    @apply w-full text-sm border-collapse;
+  }
+  .table th {
+    @apply text-start font-medium text-muted px-3 py-2 border-b border-line bg-surface whitespace-nowrap;
+  }
+  .table td {
+    @apply px-3 py-2.5 border-b border-line align-middle;
+  }
+  .chip {
+    @apply inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium whitespace-nowrap;
+  }
+  .h1 {
+    @apply text-2xl font-extrabold;
+  }
+  .h2 {
+    @apply text-lg font-bold;
+  }
+  .link {
+    @apply text-brand hover:text-brand-dark underline-offset-2 hover:underline;
+  }
+  .alert-error {
+    @apply rounded-lg border border-bad/30 bg-bad/5 text-bad px-4 py-3 text-sm;
+  }
+  .alert-ok {
+    @apply rounded-lg border border-ok/30 bg-ok/5 text-ok px-4 py-3 text-sm;
+  }
+}
