@@ -38,7 +38,7 @@ a{color:#0E6E73}a:hover{color:#0A4F53}
 .tb th{text-align:right;font-weight:500;color:#56636B;padding:5px 6px;border-bottom:1px solid #E3E7E8}
 .tb td{padding:4px 6px;border-bottom:1px solid #EEF1F2}
 .qty{width:52px;height:26px;box-sizing:border-box;border:1px solid #C9D1D4;border-radius:5px;padding:0 6px;font:inherit;font-size:12px}
-.th{width:46px;height:46px;border-radius:6px;background:#E2ECEC;display:flex;align-items:center;justify-content:center;border:1px solid #E3E7E8}
+.th{width:46px;height:46px;border-radius:6px;background:#E4EBEB;display:flex;align-items:center;justify-content:center;border:1px dashed #9FAEB3;font-size:10px;color:#3F4D54}
 .add{width:46px;height:46px;border-radius:6px;border:1px dashed #9AA6AB;display:flex;align-items:center;justify-content:center;color:#56636B;font-size:20px;background:#fff}
 </style>
 </helmet>
@@ -55,8 +55,9 @@ a{color:#0E6E73}a:hover{color:#0A4F53}
       <div class="side"><span class="lg">ניהול</span><span>דשבורד ודוחות</span><span>הזמנות</span><span class="on">מוצרים ומלאי</span><span>לקוחות</span><span>חשבוניות</span><span>משתמשים</span></div>
       <div style="flex:1;display:flex;flex-direction:column;gap:8px;padding:12px 14px;min-width:0">
         <div style="display:flex;align-items:center;gap:8px"><b style="font-size:15px">עריכת דגם</b><button class="btn2" type="button" style="margin-inline-start:auto">מחיקת דגם</button><button class="btn" type="button">שמירה</button></div>
-        <div class="card" style="display:grid;grid-template-columns:2fr 1fr 1fr;gap:10px;align-items:end">
+        <div class="card" style="display:grid;grid-template-columns:1.6fr 1.2fr 1fr 1fr;gap:10px;align-items:end">
           <div><label class="lb" for="p1">שם הדגם</label><input class="in" id="p1" value="פאנבורד 7'6&quot;"></div>
+          <div><label class="lb" for="p0">קטגוריה</label><select class="in" id="p0"><option>גלשנים</option><option>חולצות גלישה</option><option>כובעי גלישה</option></select></div>
           <div><label class="lb" for="p2">מחיר (₪, כולל מע"מ)</label><input class="in" id="p2" value="1,450"></div>
           <label style="display:flex;align-items:center;gap:6px;font-size:13px;height:30px"><input type="checkbox" checked> מוצג באתר</label>
         </div>
@@ -78,13 +79,13 @@ a{color:#0E6E73}a:hover{color:#0A4F53}
             <div style="font-weight:700;font-size:13px">תמונות לפי צבע</div>
             <div style="font-size:12px;color:#2C3940">כחול</div>
             <div style="display:flex;gap:6px">
-              <div class="th"><svg width="14" height="38" viewBox="0 0 34 104" aria-hidden="true"><path d="M17 2C31 22 31 82 17 102C3 82 3 22 17 2Z" fill="#2F7FB8"/></svg></div>
-              <div class="th"><svg width="38" height="14" viewBox="0 0 104 34" aria-hidden="true"><path d="M2 17C22 3 82 3 102 17C82 31 22 31 2 17Z" fill="#2F7FB8"/></svg></div>
+              <div class="th">תמונה</div>
+              <div class="th">תמונה</div>
               <button class="add" type="button" aria-label="העלאת תמונה לכחול">+</button>
             </div>
             <div style="font-size:12px;color:#2C3940">לבן</div>
             <div style="display:flex;gap:6px">
-              <div class="th"><svg width="14" height="38" viewBox="0 0 34 104" aria-hidden="true"><path d="M17 2C31 22 31 82 17 102C3 82 3 22 17 2Z" fill="#F0EDE4" stroke="#14202B" stroke-opacity=".25"/></svg></div>
+              <div class="th">תמונה</div>
               <button class="add" type="button" aria-label="העלאת תמונה ללבן">+</button>
             </div>
             <div style="font-size:11px;color:#56636B;margin-top:auto">גרירה לשינוי סדר התצוגה</div>
@@ -97,8 +98,8 @@ a{color:#0E6E73}a:hover{color:#0A4F53}
     <div>
       <h3>מה קורה במסך</h3>
       <ul>
-        <li>עריכת שם ומחיר לדגם, הוספת וריאציות ועדכון מלאי ידני.</li>
-        <li>העלאת תמונות לכל צבע וקביעת סדר התצוגה.</li>
+        <li>עריכת שם, קטגוריה ומחיר לדגם, הוספת וריאציות ועדכון מלאי ידני.</li>
+        <li>העלאת תמונות אמיתיות לכל צבע וקביעת סדר התצוגה. אותו מסך משמש גם לחולצות וכובעים.</li>
       </ul>
     </div>
     <div>

@@ -2,7 +2,7 @@
 <html lang="he" dir="rtl">
 <head>
 <meta charset="utf-8">
-<title>קטלוג וסינון</title>
+<title>קטלוג, קטגוריות וסינון</title>
 <script src="./support.js"></script>
 </head>
 <body>
@@ -27,69 +27,79 @@ a{color:#0E6E73}a:hover{color:#0A4F53}
 .cp{flex:1;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:28px;padding:18px 28px 20px}
 .cp h3{margin:0 0 6px;font-size:13px;font-weight:700;color:#0E6E73}
 .cp ul{margin:0;padding-inline-start:18px;font-size:14px;line-height:1.55;color:#2C3940}
-.card{background:#fff;border:1px solid #E3E7E8;border-radius:10px;padding:12px}
+.card{background:#fff;border:1px solid #E3E7E8;border-radius:10px;padding:10px}
 .lb{font-size:12px;color:#56636B;display:block;margin-bottom:4px}
-.in{width:100%;box-sizing:border-box;height:34px;border:1px solid #C9D1D4;border-radius:7px;padding:0 10px;font:inherit;font-size:14px;background:#fff;color:#14202B}
-.fg{font-size:13px;font-weight:700;margin:4px 0 2px}
-.ck{display:flex;align-items:center;gap:6px;font-size:13px;color:#2C3940}
-.ph{height:120px;border-radius:8px;background:#E2ECEC;display:flex;align-items:center;justify-content:center}
-.pr{font-weight:800;font-size:15px}
-.sw{width:14px;height:14px;border-radius:7px;border:1px solid rgba(20,32,43,.25)}
-.stk{font-size:12px;color:#1E6B3A}
+.in{width:100%;box-sizing:border-box;height:32px;border:1px solid #C9D1D4;border-radius:7px;padding:0 10px;font:inherit;font-size:13px;background:#fff;color:#14202B}
+.fg{font-size:12px;font-weight:700;margin:4px 0 0}
+.ck{display:flex;align-items:center;gap:6px;font-size:12px;color:#2C3940}
+.ph{height:96px;border-radius:8px;background:#E4EBEB;border:1px dashed #9FAEB3;color:#3F4D54;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:3px;font-size:11px;text-align:center;padding:0 6px}
+.pr{font-weight:800;font-size:14px}
+.sw{width:12px;height:12px;border-radius:6px;border:1px solid rgba(20,32,43,.25)}
+.stk{font-size:11px;color:#1E6B3A}
+.tab{height:30px;padding:0 14px;border-radius:999px;border:1px solid #C9D1D4;background:#fff;font:inherit;font-size:13px;color:#14202B}
+.tab.on{background:#0E6E73;border-color:#0E6E73;color:#fff;font-weight:700}
+.cg{font-size:10px;font-weight:500;color:#463A73;background:#ECEAF4;border-radius:999px;padding:1px 7px;align-self:flex-start}
 </style>
 </helmet>
 <div class="pn">
   <div class="st">
     <div class="nm">2</div>
-    <h2 class="tt">קטלוג גלשנים עם סינון וחיפוש</h2>
+    <h2 class="tt">קטלוג: קטגוריות, סינון וחיפוש</h2>
     <span class="ch">לקוח</span>
-    <span class="ref">PRD §5.1 · ERD: Product, ProductVariant</span>
+    <span class="ref">PRD §5.1 · ERD: Product.category, ProductVariant</span>
   </div>
   <div class="sc">
     <div class="br"><span class="dt"></span><span class="dt"></span><span class="dt"></span><span class="url">/catalog</span></div>
-    <div class="nav"><span class="logo">[שם העסק] · גלשנים לעסקים</span><span style="margin-inline-start:auto;color:#0E6E73;font-weight:700">קטלוג</span><span style="color:#56636B">ההזמנות שלי</span><span style="color:#56636B">עגלה (0)</span></div>
-    <div style="flex:1;display:flex;gap:16px;padding:16px 20px;min-height:0">
-      <div class="card" style="width:190px;flex:none;display:flex;flex-direction:column;gap:6px">
-        <label class="lb" for="q" style="margin:0">חיפוש</label>
-        <input class="in" id="q" value="אפוקסי">
-        <div class="fg">מידה</div>
-        <label class="ck"><input type="checkbox" checked> 7'0" – 7'6"</label>
-        <label class="ck"><input type="checkbox"> 8'0" – 8'6"</label>
-        <label class="ck"><input type="checkbox"> 9'0" ומעלה</label>
-        <div class="fg">צבע</div>
-        <div style="display:flex;gap:6px"><span class="sw" style="background:#2F7FB8"></span><span class="sw" style="background:#F0EDE4"></span><span class="sw" style="background:#E2683C"></span><span class="sw" style="background:#2E2E2E"></span></div>
-        <div class="fg">חומר</div>
-        <label class="ck"><input type="checkbox" checked> אפוקסי</label>
-        <label class="ck"><input type="checkbox"> פוליאוריתן</label>
-        <label class="ck"><input type="checkbox"> סופט טופ</label>
-        <label class="ck" style="margin-top:4px"><input type="checkbox" checked> רק במלאי</label>
+    <div class="nav"><span class="logo">[שם העסק] · ציוד גלישה לעסקים</span><span style="margin-inline-start:auto;color:#0E6E73;font-weight:700">קטלוג</span><span style="color:#56636B">ההזמנות שלי</span><span style="color:#56636B">עגלה (0)</span></div>
+    <div style="flex:1;display:flex;flex-direction:column;gap:10px;padding:12px 20px;min-height:0">
+      <div style="display:flex;gap:8px;align-items:center">
+        <button class="tab on" type="button">הכול</button>
+        <button class="tab" type="button">גלשנים</button>
+        <button class="tab" type="button">חולצות גלישה</button>
+        <button class="tab" type="button">כובעי גלישה</button>
+        <span style="margin-inline-start:auto;font-size:12px;color:#56636B">4 דגמים · מיון: שם ▾</span>
       </div>
-      <div style="flex:1;display:flex;flex-direction:column;gap:10px;min-width:0">
-        <div style="display:flex;align-items:center;font-size:13px;color:#56636B"><span>4 דגמים</span><span style="margin-inline-start:auto">מיון: שם ▾</span></div>
-        <div style="display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px">
-          <div class="card" style="display:flex;flex-direction:column;gap:6px">
-            <div class="ph"><svg width="34" height="104" viewBox="0 0 34 104" aria-hidden="true"><path d="M17 2C31 22 31 82 17 102C3 82 3 22 17 2Z" fill="#2F7FB8"/><line x1="17" y1="8" x2="17" y2="96" stroke="#fff" stroke-opacity=".6"/></svg></div>
-            <div style="font-weight:700;font-size:14px">פאנבורד 7'6"</div>
+      <div style="flex:1;display:flex;gap:14px;min-height:0">
+        <div class="card" style="width:180px;flex:none;display:flex;flex-direction:column;gap:5px">
+          <label class="lb" for="q" style="margin:0">חיפוש</label>
+          <input class="in" id="q" value="">
+          <div class="fg">מידה</div>
+          <div style="font-size:11px;color:#56636B">משתנה לפי קטגוריה</div>
+          <label class="ck"><input type="checkbox"> גלשנים: 7'0" – 9'0"</label>
+          <label class="ck"><input type="checkbox" checked> חולצות: S – XXL</label>
+          <label class="ck"><input type="checkbox"> כובעים: מידה אחת / S–L</label>
+          <div class="fg">צבע</div>
+          <div style="display:flex;gap:6px"><span class="sw" style="background:#2F7FB8"></span><span class="sw" style="background:#1F2A44"></span><span class="sw" style="background:#E2683C"></span><span class="sw" style="background:#D9C9A3"></span></div>
+          <div class="fg">חומר</div>
+          <label class="ck"><input type="checkbox"> אפוקסי / פוליאוריתן</label>
+          <label class="ck"><input type="checkbox"> לייקרה</label>
+          <label class="ck"><input type="checkbox"> ניאופרן / כותנה</label>
+          <label class="ck" style="margin-top:2px"><input type="checkbox" checked> רק במלאי</label>
+        </div>
+        <div style="flex:1;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px;align-content:start;min-width:0">
+          <a href="C3-Product.dc.html" class="card" style="display:flex;flex-direction:column;gap:5px;text-decoration:none;color:inherit">
+            <span class="cg">גלשן</span>
+            <div style="font-weight:700;font-size:13px">פאנבורד 7'6"</div>
             <div style="display:flex;gap:4px"><span class="sw" style="background:#2F7FB8"></span><span class="sw" style="background:#F0EDE4"></span></div>
             <div class="pr">1,450 ₪</div><div class="stk">במלאי</div>
-          </div>
-          <div class="card" style="display:flex;flex-direction:column;gap:6px">
-            <div class="ph"><svg width="34" height="104" viewBox="0 0 34 104" aria-hidden="true"><path d="M17 2C31 22 31 82 17 102C3 82 3 22 17 2Z" fill="#E2683C"/><line x1="17" y1="8" x2="17" y2="96" stroke="#fff" stroke-opacity=".6"/></svg></div>
-            <div style="font-weight:700;font-size:14px">מיני מאליבו 7'0"</div>
+          </a>
+          <div class="card" style="display:flex;flex-direction:column;gap:5px">
+            <span class="cg">גלשן</span>
+            <div style="font-weight:700;font-size:13px">מיני מאליבו 7'0"</div>
             <div style="display:flex;gap:4px"><span class="sw" style="background:#E2683C"></span><span class="sw" style="background:#2E2E2E"></span></div>
             <div class="pr">1,290 ₪</div><div class="stk">במלאי</div>
           </div>
-          <div class="card" style="display:flex;flex-direction:column;gap:6px">
-            <div class="ph"><svg width="34" height="104" viewBox="0 0 34 104" aria-hidden="true"><path d="M17 2C31 22 31 82 17 102C3 82 3 22 17 2Z" fill="#F0EDE4" stroke="#14202B" stroke-opacity=".2"/><line x1="17" y1="8" x2="17" y2="96" stroke="#14202B" stroke-opacity=".2"/></svg></div>
-            <div style="font-weight:700;font-size:14px">אגג 7'2"</div>
-            <div style="display:flex;gap:4px"><span class="sw" style="background:#F0EDE4"></span></div>
-            <div class="pr">1,380 ₪</div><div class="stk" style="color:#8A4B00">מלאי נמוך</div>
-          </div>
-          <div class="card" style="display:flex;flex-direction:column;gap:6px">
-            <div class="ph"><svg width="34" height="104" viewBox="0 0 34 104" aria-hidden="true"><path d="M17 2C31 22 31 82 17 102C3 82 3 22 17 2Z" fill="#2E2E2E"/><line x1="17" y1="8" x2="17" y2="96" stroke="#fff" stroke-opacity=".5"/></svg></div>
-            <div style="font-weight:700;font-size:14px">הייבריד 7'4"</div>
-            <div style="display:flex;gap:4px"><span class="sw" style="background:#2E2E2E"></span><span class="sw" style="background:#2F7FB8"></span></div>
-            <div class="pr">1,520 ₪</div><div class="stk">במלאי</div>
+          <a href="C3b-ProductShirt.dc.html" class="card" style="display:flex;flex-direction:column;gap:5px;text-decoration:none;color:inherit">
+            <span class="cg">חולצת גלישה</span>
+            <div style="font-weight:700;font-size:13px">חולצת UV שרוול ארוך</div>
+            <div style="display:flex;gap:4px"><span class="sw" style="background:#1F2A44"></span><span class="sw" style="background:#2F7FB8"></span><span class="sw" style="background:#F0EDE4"></span></div>
+            <div class="pr">120 ₪</div><div class="stk">במלאי</div>
+          </a>
+          <div class="card" style="display:flex;flex-direction:column;gap:5px">
+            <span class="cg">כובע גלישה</span>
+            <div style="font-weight:700;font-size:13px">כובע גלישה רחב שוליים</div>
+            <div style="display:flex;gap:4px"><span class="sw" style="background:#D9C9A3"></span><span class="sw" style="background:#1F2A44"></span></div>
+            <div class="pr">85 ₪</div><div class="stk" style="color:#8A4B00">מלאי נמוך</div>
           </div>
         </div>
       </div>
@@ -99,15 +109,15 @@ a{color:#0E6E73}a:hover{color:#0A4F53}
     <div>
       <h3>מה קורה במסך</h3>
       <ul>
-        <li>הלקוח מחפש ומסנן לפי מידה, צבע, חומר וזמינות.</li>
-        <li>כל כרטיס הוא <b>דגם</b> עם הצבעים הקיימים, מחיר ומצב מלאי.</li>
+        <li>הלקוח בוחר קטגוריה: גלשנים, חולצות גלישה או כובעי גלישה.</li>
+        <li>מסנן לפי מידה, צבע, חומר וזמינות; המידות מותאמות לכל קטגוריה.</li>
       </ul>
     </div>
     <div>
       <h3>כללים</h3>
       <ul>
-        <li>מחיר אחד לדגם, זהה לכל הלקוחות ולכל הווריאציות.</li>
-        <li>מוצגים רק דגמים עם <b>is_active</b>; המלאי מחושב מסכום הווריאציות.</li>
+        <li>לכל דגם יש <b>category</b> ומחיר אחד, זהה לכל הלקוחות ולכל הווריאציות.</li>
+        <li>מוצגים רק דגמים עם <b>is_active</b>.</li>
       </ul>
     </div>
   </div>
