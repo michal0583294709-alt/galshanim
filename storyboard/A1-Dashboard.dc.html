@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="utf-8">
+<title>דשבורד ודוחות</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;700;800&amp;display=swap">
+<style>
+body{margin:0}
+a{color:#0E6E73}a:hover{color:#0A4F53}
+.pn{width:1000px;height:720px;box-sizing:border-box;background:#FFFFFF;font-family:'Heebo',system-ui,sans-serif;color:#14202B;display:flex;flex-direction:column;direction:rtl}
+.st{display:flex;align-items:center;gap:14px;padding:18px 28px;border-bottom:1px solid #E3E7E8}
+.nm{width:40px;height:40px;border-radius:20px;background:#14202B;color:#fff;font-weight:800;font-size:18px;display:flex;align-items:center;justify-content:center;flex:none}
+.tt{font-size:22px;font-weight:800;margin:0}
+.ch{font-size:13px;font-weight:500;padding:4px 10px;border-radius:999px;background:#ECEAF4;color:#463A73}
+.ref{margin-inline-start:auto;font-size:13px;color:#56636B}
+.sc{margin:20px 28px 0;height:440px;border:1px solid #D5DBDD;border-radius:12px;overflow:hidden;background:#F5F7F7;display:flex;flex-direction:column}
+.br{height:34px;flex:none;display:flex;align-items:center;gap:8px;padding:0 14px;background:#ECEFF0;border-bottom:1px solid #D5DBDD;font-size:12px;color:#56636B}
+.dt{width:9px;height:9px;border-radius:5px;background:#C3CACD}
+.url{margin-inline-start:12px;background:#fff;border-radius:6px;padding:3px 12px;direction:ltr}
+.side{width:148px;flex:none;background:#14202B;color:#C9D3D8;display:flex;flex-direction:column;gap:2px;padding:12px 8px;font-size:13px}
+.side .lg{color:#fff;font-weight:800;font-size:14px;padding:4px 8px 10px}
+.side span{padding:6px 8px;border-radius:6px}
+.side .on{background:#24343F;color:#fff;font-weight:700}
+.cp{flex:1;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:28px;padding:18px 28px 20px}
+.cp h3{margin:0 0 6px;font-size:13px;font-weight:700;color:#0E6E73}
+.cp ul{margin:0;padding-inline-start:18px;font-size:14px;line-height:1.55;color:#2C3940}
+.card{background:#fff;border:1px solid #E3E7E8;border-radius:10px;padding:10px 12px}
+.k{font-size:12px;color:#56636B}
+.v{font-size:21px;font-weight:800}
+.bar{width:100%;background:#0E6E73;border-radius:3px 3px 0 0}
+.tb{width:100%;border-collapse:collapse;font-size:12px}
+.tb td{padding:4px 2px;border-bottom:1px solid #EEF1F2}
+.sel{height:28px;border:1px solid #C9D1D4;border-radius:6px;font:inherit;font-size:12px;background:#fff;padding:0 6px}
+</style>
+</helmet>
+<div class="pn">
+  <div class="st">
+    <div class="nm">7</div>
+    <h2 class="tt">דשבורד ודוחות מכירות ומלאי</h2>
+    <span class="ch">מנהלת</span>
+    <span class="ref">PRD §6.6 · מחושב מ-Order, OrderItem, ProductVariant</span>
+  </div>
+  <div class="sc">
+    <div class="br"><span class="dt"></span><span class="dt"></span><span class="dt"></span><span class="url">/admin/reports</span></div>
+    <div style="flex:1;display:flex;min-height:0">
+      <div class="side"><span class="lg">ניהול</span><span class="on">דשבורד ודוחות</span><span>הזמנות</span><span>מוצרים ומלאי</span><span>לקוחות</span><span>חשבוניות</span><span>משתמשים</span></div>
+      <div style="flex:1;display:flex;flex-direction:column;gap:10px;padding:12px 14px;min-width:0">
+        <div style="display:flex;align-items:center;gap:8px;font-size:12px"><b style="font-size:15px">סקירה</b><span style="color:#56636B;margin-inline-start:auto">תקופה</span><select class="sel" aria-label="תקופה"><option>נובמבר 2026</option></select><select class="sel" aria-label="סוג דוח"><option>לפי מוצר</option><option>לפי לקוח</option></select><span style="color:#56636B">(נתוני דוגמה)</span></div>
+        <div style="display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px">
+          <div class="card"><div class="k">הזמנות חדשות</div><div class="v">7</div></div>
+          <div class="card"><div class="k">מכירות בתקופה</div><div class="v">184,300 ₪</div></div>
+          <div class="card"><div class="k">ממתין לתשלום</div><div class="v">3 הזמנות</div></div>
+          <div class="card" style="border-color:#E8C27A;background:#FFF8EA"><div class="k" style="color:#6B4000">וריאציות במלאי נמוך</div><div class="v" style="color:#6B4000">5</div></div>
+        </div>
+        <div style="flex:1;display:grid;grid-template-columns:1.3fr 1fr 1fr;gap:10px;min-height:0">
+          <div class="card" style="display:flex;flex-direction:column">
+            <div style="font-weight:700;font-size:13px">מכירות לפי חודש</div>
+            <div style="flex:1;display:flex;align-items:flex-end;gap:10px;padding-top:8px;border-bottom:1px solid #C9D1D4">
+              <div style="flex:1;display:flex;flex-direction:column;align-items:center;gap:3px;height:100%;justify-content:flex-end"><div class="bar" style="height:40%"></div></div>
+              <div style="flex:1;display:flex;flex-direction:column;align-items:center;gap:3px;height:100%;justify-content:flex-end"><div class="bar" style="height:55%"></div></div>
+              <div style="flex:1;display:flex;flex-direction:column;align-items:center;gap:3px;height:100%;justify-content:flex-end"><div class="bar" style="height:48%"></div></div>
+              <div style="flex:1;display:flex;flex-direction:column;align-items:center;gap:3px;height:100%;justify-content:flex-end"><div class="bar" style="height:70%"></div></div>
+              <div style="flex:1;display:flex;flex-direction:column;align-items:center;gap:3px;height:100%;justify-content:flex-end"><div class="bar" style="height:86%;background:#0A4F53"></div></div>
+            </div>
+            <div style="display:flex;gap:10px;font-size:11px;color:#56636B;padding-top:3px"><span style="flex:1;text-align:center">יולי</span><span style="flex:1;text-align:center">אוג׳</span><span style="flex:1;text-align:center">ספט׳</span><span style="flex:1;text-align:center">אוק׳</span><span style="flex:1;text-align:center">נוב׳</span></div>
+          </div>
+          <div class="card">
+            <div style="font-weight:700;font-size:13px;margin-bottom:4px">מובילים לפי מוצר</div>
+            <table class="tb"><tbody>
+              <tr><td>פאנבורד</td><td style="text-align:left">62 יח׳</td></tr>
+              <tr><td>מיני מאליבו</td><td style="text-align:left">41 יח׳</td></tr>
+              <tr><td>הייבריד</td><td style="text-align:left">27 יח׳</td></tr>
+              <tr><td>אגג</td><td style="text-align:left">15 יח׳</td></tr>
+            </tbody></table>
+          </div>
+          <div class="card">
+            <div style="font-weight:700;font-size:13px;margin-bottom:4px;color:#6B4000">מלאי נמוך</div>
+            <table class="tb"><tbody>
+              <tr><td>פאנבורד · כחול 8'0"</td><td style="text-align:left;color:#9B2C1E;font-weight:700">0</td></tr>
+              <tr><td>אגג · לבן 7'2"</td><td style="text-align:left">2</td></tr>
+              <tr><td>מיני מאליבו · כתום 7'0"</td><td style="text-align:left">4</td></tr>
+              <tr><td>הייבריד · שחור 7'4"</td><td style="text-align:left">4</td></tr>
+            </tbody></table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="cp">
+    <div>
+      <h3>מה קורה במסך</h3>
+      <ul>
+        <li>בעלת העסק נכנסת ורואה תמונת מצב: הזמנות חדשות, מכירות, תשלומים פתוחים.</li>
+        <li>בוחרת תקופה ומחליפה בין דוח לפי מוצר ולפי לקוח.</li>
+      </ul>
+    </div>
+    <div>
+      <h3>כללים</h3>
+      <ul>
+        <li>לדוחות אין ישות נפרדת: הכול מחושב מהזמנות, שורות הזמנה ומלאי.</li>
+        <li>סף "מלאי נמוך" עדיין לא הוגדר ב-PRD; צריך להחליט עליו.</li>
+      </ul>
+    </div>
+  </div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1000,"height":720}}'>
+class Component extends DCLogic {
+  renderVals() { return {}; }
+}
+</script>
+</body>
+</html>

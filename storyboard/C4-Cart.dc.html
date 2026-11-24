@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="utf-8">
+<title>עגלה ודמי משלוח</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;700;800&amp;display=swap">
+<style>
+body{margin:0}
+a{color:#0E6E73}a:hover{color:#0A4F53}
+.pn{width:1000px;height:720px;box-sizing:border-box;background:#FFFFFF;font-family:'Heebo',system-ui,sans-serif;color:#14202B;display:flex;flex-direction:column;direction:rtl}
+.st{display:flex;align-items:center;gap:14px;padding:18px 28px;border-bottom:1px solid #E3E7E8}
+.nm{width:40px;height:40px;border-radius:20px;background:#0E6E73;color:#fff;font-weight:800;font-size:18px;display:flex;align-items:center;justify-content:center;flex:none}
+.tt{font-size:22px;font-weight:800;margin:0}
+.ch{font-size:13px;font-weight:500;padding:4px 10px;border-radius:999px;background:#E6F1F1;color:#0A4F53}
+.ref{margin-inline-start:auto;font-size:13px;color:#56636B}
+.sc{margin:20px 28px 0;height:440px;border:1px solid #D5DBDD;border-radius:12px;overflow:hidden;background:#F5F7F7;display:flex;flex-direction:column}
+.br{height:34px;flex:none;display:flex;align-items:center;gap:8px;padding:0 14px;background:#ECEFF0;border-bottom:1px solid #D5DBDD;font-size:12px;color:#56636B}
+.dt{width:9px;height:9px;border-radius:5px;background:#C3CACD}
+.url{margin-inline-start:12px;background:#fff;border-radius:6px;padding:3px 12px;direction:ltr}
+.nav{height:48px;flex:none;display:flex;align-items:center;gap:20px;padding:0 20px;background:#fff;border-bottom:1px solid #E3E7E8;font-size:14px}
+.logo{font-weight:800;color:#0E6E73;font-size:17px}
+.cp{flex:1;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:28px;padding:18px 28px 20px}
+.cp h3{margin:0 0 6px;font-size:13px;font-weight:700;color:#0E6E73}
+.cp ul{margin:0;padding-inline-start:18px;font-size:14px;line-height:1.55;color:#2C3940}
+.btn{display:inline-flex;align-items:center;justify-content:center;height:38px;padding:0 16px;border-radius:8px;font:inherit;font-size:14px;font-weight:700;border:1px solid #0E6E73;background:#0E6E73;color:#fff}
+.card{background:#fff;border:1px solid #E3E7E8;border-radius:10px;padding:12px}
+.tb{width:100%;border-collapse:collapse;font-size:13px}
+.tb th{text-align:right;font-weight:500;color:#56636B;padding:7px 8px;border-bottom:1px solid #E3E7E8}
+.tb td{padding:7px 8px;border-bottom:1px solid #EEF1F2;vertical-align:middle}
+.qty{width:56px;height:28px;box-sizing:border-box;border:1px solid #C9D1D4;border-radius:6px;padding:0 8px;font:inherit;font-size:13px}
+.row{display:flex;justify-content:space-between;font-size:14px;padding:4px 0}
+.sw{display:inline-block;width:10px;height:10px;border-radius:5px;margin-inline-end:4px;vertical-align:middle;border:1px solid rgba(20,32,43,.25)}
+</style>
+</helmet>
+<div class="pn">
+  <div class="st">
+    <div class="nm">4</div>
+    <h2 class="tt">עגלת קניות וחישוב דמי משלוח</h2>
+    <span class="ch">לקוח</span>
+    <span class="ref">PRD §5.2 · ERD: Order, OrderItem</span>
+  </div>
+  <div class="sc">
+    <div class="br"><span class="dt"></span><span class="dt"></span><span class="dt"></span><span class="url">/cart</span></div>
+    <div class="nav"><span class="logo">[שם העסק] · גלשנים לעסקים</span><span style="margin-inline-start:auto;color:#56636B">קטלוג</span><span style="color:#56636B">ההזמנות שלי</span><span style="color:#0E6E73;font-weight:700">עגלה (22)</span></div>
+    <div style="flex:1;display:flex;gap:16px;padding:16px 20px;min-height:0">
+      <div class="card" style="flex:1;padding:6px 10px;min-width:0">
+        <table class="tb">
+          <thead><tr><th>דגם</th><th>וריאציה</th><th>מחיר</th><th>כמות</th><th>סה"כ</th></tr></thead>
+          <tbody>
+            <tr><td style="font-weight:700">פאנבורד</td><td><span class="sw" style="background:#2F7FB8"></span>כחול · 7'0" · אפוקסי</td><td>1,450 ₪</td><td><input class="qty" value="6" aria-label="כמות"></td><td>8,700 ₪</td></tr>
+            <tr><td style="font-weight:700">פאנבורד</td><td><span class="sw" style="background:#2F7FB8"></span>כחול · 7'6" · אפוקסי</td><td>1,450 ₪</td><td><input class="qty" value="12" aria-label="כמות"></td><td>17,400 ₪</td></tr>
+            <tr><td style="font-weight:700">מיני מאליבו</td><td><span class="sw" style="background:#E2683C"></span>כתום · 7'0" · פוליאוריתן</td><td>1,290 ₪</td><td><input class="qty" value="4" aria-label="כמות" style="border-color:#B86E00"></td><td>5,160 ₪</td></tr>
+            <tr><td colspan="5" style="font-size:12px;color:#6B4000;background:#FFF3DC;border-radius:6px">המלאי של וריאציה זו ירד ל-4 יחידות. הכמות עודכנה אוטומטית.</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div style="width:260px;flex:none;display:flex;flex-direction:column;gap:10px">
+        <div class="card" style="display:flex;flex-direction:column;gap:2px">
+          <div style="font-weight:700;margin-bottom:4px">סיכום</div>
+          <div class="row"><span>סכום ביניים (כולל מע"מ)</span><span>31,260 ₪</span></div>
+          <div class="row"><span>משלוח</span><span style="color:#1E6B3A;font-weight:700">חינם</span></div>
+          <div class="row" style="border-top:1px solid #E3E7E8;margin-top:4px;padding-top:8px;font-weight:800;font-size:16px"><span>לתשלום</span><span>31,260 ₪</span></div>
+          <button class="btn" type="button" style="margin-top:8px">המשך לפרטי משלוח ותשלום</button>
+        </div>
+        <div class="card" style="background:#E6F1F1;border-color:#CFE3E3;font-size:13px;line-height:1.5;color:#0A4F53">
+          <b>חוק המשלוח</b><br>מעל 10,000 ₪ (כולל מע"מ): חינם.<br>עד 10,000 ₪: ‎300 ₪ להזמנה.<br><span style="color:#2C3940">דוגמה: הזמנה של 7,800 ₪ ← לתשלום 8,100 ₪.</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="cp">
+    <div>
+      <h3>מה קורה במסך</h3>
+      <ul>
+        <li>הלקוח רואה כל וריאציה בשורה נפרדת ומשנה כמויות.</li>
+        <li>המערכת מחשבת דמי משלוח לפי הסכום ומציגה את סך הכול.</li>
+      </ul>
+    </div>
+    <div>
+      <h3>כללים</h3>
+      <ul>
+        <li><b>shipping_fee</b> = 0 אם <b>subtotal_amount</b> מעל 10,000 ₪, אחרת 300 ₪.</li>
+        <li>המלאי נבדק שוב בעגלה ובשליחת ההזמנה; <b>unit_price</b> נשמר כפי שהיה בזמן ההזמנה.</li>
+      </ul>
+    </div>
+  </div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1000,"height":720}}'>
+class Component extends DCLogic {
+  renderVals() { return {}; }
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="utf-8">
+<title>הרשמת לקוח עסקי</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;700;800&amp;display=swap">
+<style>
+body{margin:0}
+a{color:#0E6E73}a:hover{color:#0A4F53}
+.pn{width:1000px;height:720px;box-sizing:border-box;background:#FFFFFF;font-family:'Heebo',system-ui,sans-serif;color:#14202B;display:flex;flex-direction:column;direction:rtl}
+.st{display:flex;align-items:center;gap:14px;padding:18px 28px;border-bottom:1px solid #E3E7E8}
+.nm{width:40px;height:40px;border-radius:20px;background:#0E6E73;color:#fff;font-weight:800;font-size:18px;display:flex;align-items:center;justify-content:center;flex:none}
+.tt{font-size:22px;font-weight:800;margin:0}
+.ch{font-size:13px;font-weight:500;padding:4px 10px;border-radius:999px;background:#E6F1F1;color:#0A4F53}
+.ref{margin-inline-start:auto;font-size:13px;color:#56636B}
+.sc{margin:20px 28px 0;height:440px;border:1px solid #D5DBDD;border-radius:12px;overflow:hidden;background:#F5F7F7;display:flex;flex-direction:column}
+.br{height:34px;flex:none;display:flex;align-items:center;gap:8px;padding:0 14px;background:#ECEFF0;border-bottom:1px solid #D5DBDD;font-size:12px;color:#56636B}
+.dt{width:9px;height:9px;border-radius:5px;background:#C3CACD}
+.url{margin-inline-start:12px;background:#fff;border-radius:6px;padding:3px 12px;direction:ltr}
+.nav{height:48px;flex:none;display:flex;align-items:center;gap:20px;padding:0 20px;background:#fff;border-bottom:1px solid #E3E7E8;font-size:14px}
+.logo{font-weight:800;color:#0E6E73;font-size:17px}
+.cp{flex:1;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:28px;padding:18px 28px 20px}
+.cp h3{margin:0 0 6px;font-size:13px;font-weight:700;color:#0E6E73}
+.cp ul{margin:0;padding-inline-start:18px;font-size:14px;line-height:1.55;color:#2C3940}
+.btn{display:inline-flex;align-items:center;justify-content:center;height:36px;padding:0 16px;border-radius:8px;font:inherit;font-size:14px;font-weight:700;border:1px solid #0E6E73;background:#0E6E73;color:#fff}
+.btn2{display:inline-flex;align-items:center;justify-content:center;height:36px;padding:0 16px;border-radius:8px;font:inherit;font-size:14px;font-weight:500;border:1px solid #C9D1D4;background:#fff;color:#14202B}
+.card{background:#fff;border:1px solid #E3E7E8;border-radius:10px;padding:16px}
+.lb{font-size:12px;color:#56636B;display:block;margin-bottom:4px}
+.in{width:100%;box-sizing:border-box;height:34px;border:1px solid #C9D1D4;border-radius:7px;padding:0 10px;font:inherit;font-size:14px;background:#fff;color:#14202B}
+</style>
+</helmet>
+<div class="pn">
+  <div class="st">
+    <div class="nm">1</div>
+    <h2 class="tt">הרשמה של לקוח עסקי</h2>
+    <span class="ch">לקוח</span>
+    <span class="ref">PRD §5.4 · ERD: Customer</span>
+  </div>
+  <div class="sc">
+    <div class="br"><span class="dt"></span><span class="dt"></span><span class="dt"></span><span class="url">/register</span></div>
+    <div class="nav"><span class="logo">[שם העסק] · גלשנים לעסקים</span><span style="margin-inline-start:auto;color:#56636B">קטלוג</span><span style="color:#0E6E73;font-weight:700">הרשמה / התחברות</span></div>
+    <div style="flex:1;display:flex;gap:18px;padding:18px 20px;min-height:0">
+      <div class="card" style="flex:1;display:flex;flex-direction:column;gap:12px">
+        <div style="font-size:17px;font-weight:700">פתיחת חשבון עסקי</div>
+        <div style="display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px 14px">
+          <div><label class="lb" for="r1">שם העסק *</label><input class="in" id="r1" value="גלישה בים בע&quot;מ"></div>
+          <div><label class="lb" for="r2">ח.פ / ע.מ *</label><input class="in" id="r2" value="51-xxxxxxx-x"></div>
+          <div><label class="lb" for="r3">איש קשר *</label><input class="in" id="r3" value="[שם איש הקשר]"></div>
+          <div><label class="lb" for="r4">סוג העסק</label><select class="in" id="r4"><option>בית ספר לגלישה</option><option>חנות גלישה</option><option>מועדון</option><option>מלון</option><option>אחר</option></select></div>
+          <div><label class="lb" for="r5">אימייל (להתחברות) *</label><input class="in" id="r5" value="office@example.co.il" style="direction:ltr;text-align:right"></div>
+          <div><label class="lb" for="r6">טלפון</label><input class="in" id="r6" value="05x-xxxxxxx"></div>
+          <div style="grid-column:span 2"><label class="lb" for="r7">כתובת העסק (ישמש כברירת מחדל למשלוח)</label><input class="in" id="r7" value="[רחוב, עיר]"></div>
+          <div><label class="lb" for="r8">סיסמה *</label><input class="in" id="r8" type="password" value="xxxxxxxx"></div>
+          <div><label class="lb" for="r9">אימות סיסמה *</label><input class="in" id="r9" type="password" value="xxxxxxxx"></div>
+        </div>
+        <div style="display:flex;gap:10px;margin-top:auto"><button class="btn" type="button">יצירת חשבון וכניסה לקטלוג</button></div>
+      </div>
+      <div style="width:250px;flex:none;display:flex;flex-direction:column;gap:12px">
+        <div class="card" style="display:flex;flex-direction:column;gap:8px">
+          <div style="font-weight:700">כבר רשומים?</div>
+          <label class="lb" for="l1" style="margin:0">אימייל</label><input class="in" id="l1">
+          <label class="lb" for="l2" style="margin:0">סיסמה</label><input class="in" id="l2" type="password">
+          <button class="btn2" type="button">התחברות</button>
+        </div>
+        <div class="card" style="background:#E6F1F1;border-color:#CFE3E3;font-size:13px;line-height:1.5;color:#0A4F53">אחרי ההרשמה רואים מיד את הקטלוג והמחירים. אין צורך באישור מראש.</div>
+      </div>
+    </div>
+  </div>
+  <div class="cp">
+    <div>
+      <h3>מה קורה במסך</h3>
+      <ul>
+        <li>לקוח עסקי (חנות, בית ספר, מועדון, מלון) פותח חשבון בעצמו.</li>
+        <li>אחרי יצירת החשבון הוא מועבר ישר לקטלוג.</li>
+      </ul>
+    </div>
+    <div>
+      <h3>כללים</h3>
+      <ul>
+        <li>האימייל ייחודי ומשמש להתחברות; הסיסמה נשמרת מוצפנת (§8).</li>
+        <li>לקוח חדש נפתח עם <b>is_net_terms_approved = false</b>: שוטף+30 רק באישור המנהלת.</li>
+      </ul>
+    </div>
+  </div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1000,"height":720}}'>
+class Component extends DCLogic {
+  renderVals() { return {}; }
+}
+</script>
+</body>
+</html>

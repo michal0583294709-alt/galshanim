@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="utf-8">
+<title>ניהול לקוחות ותנאי תשלום</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;700;800&amp;display=swap">
+<style>
+body{margin:0}
+a{color:#0E6E73}a:hover{color:#0A4F53}
+.pn{width:1000px;height:720px;box-sizing:border-box;background:#FFFFFF;font-family:'Heebo',system-ui,sans-serif;color:#14202B;display:flex;flex-direction:column;direction:rtl}
+.st{display:flex;align-items:center;gap:14px;padding:18px 28px;border-bottom:1px solid #E3E7E8}
+.nm{width:40px;height:40px;border-radius:20px;background:#14202B;color:#fff;font-weight:800;font-size:18px;display:flex;align-items:center;justify-content:center;flex:none}
+.tt{font-size:22px;font-weight:800;margin:0}
+.ch{font-size:13px;font-weight:500;padding:4px 10px;border-radius:999px;background:#ECEAF4;color:#463A73}
+.ref{margin-inline-start:auto;font-size:13px;color:#56636B}
+.sc{margin:20px 28px 0;height:440px;border:1px solid #D5DBDD;border-radius:12px;overflow:hidden;background:#F5F7F7;display:flex;flex-direction:column}
+.br{height:34px;flex:none;display:flex;align-items:center;gap:8px;padding:0 14px;background:#ECEFF0;border-bottom:1px solid #D5DBDD;font-size:12px;color:#56636B}
+.dt{width:9px;height:9px;border-radius:5px;background:#C3CACD}
+.url{margin-inline-start:12px;background:#fff;border-radius:6px;padding:3px 12px;direction:ltr}
+.side{width:148px;flex:none;background:#14202B;color:#C9D3D8;display:flex;flex-direction:column;gap:2px;padding:12px 8px;font-size:13px}
+.side .lg{color:#fff;font-weight:800;font-size:14px;padding:4px 8px 10px}
+.side span{padding:6px 8px;border-radius:6px}
+.side .on{background:#24343F;color:#fff;font-weight:700}
+.cp{flex:1;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:28px;padding:18px 28px 20px}
+.cp h3{margin:0 0 6px;font-size:13px;font-weight:700;color:#0E6E73}
+.cp ul{margin:0;padding-inline-start:18px;font-size:14px;line-height:1.55;color:#2C3940}
+.btn{display:inline-flex;align-items:center;justify-content:center;height:30px;padding:0 12px;border-radius:7px;font:inherit;font-size:13px;font-weight:700;border:1px solid #0E6E73;background:#0E6E73;color:#fff}
+.card{background:#fff;border:1px solid #E3E7E8;border-radius:10px;padding:10px 12px}
+.lb{font-size:11px;color:#56636B;display:block;margin-bottom:2px}
+.in{width:100%;box-sizing:border-box;height:30px;border:1px solid #C9D1D4;border-radius:6px;padding:0 8px;font:inherit;font-size:13px;background:#fff;color:#14202B}
+.li{display:flex;flex-direction:column;padding:7px 8px;border-radius:7px;font-size:13px}
+.li small{font-size:11px;color:#56636B}
+.kv{display:flex;justify-content:space-between;font-size:12px;padding:3px 0;border-bottom:1px solid #EEF1F2}
+.tg{font-size:11px;font-weight:500;padding:1px 7px;border-radius:999px;display:inline-block;background:#E6F1F1;color:#0A4F53}
+.sw{position:relative;width:38px;height:22px;border-radius:11px;background:#0E6E73;flex:none}
+.sw span{position:absolute;top:3px;left:3px;width:16px;height:16px;border-radius:8px;background:#fff}
+</style>
+</helmet>
+<div class="pn">
+  <div class="st">
+    <div class="nm">11</div>
+    <h2 class="tt">ניהול לקוחות ואישור תנאי תשלום</h2>
+    <span class="ch">מנהלת</span>
+    <span class="ref">PRD §6.4 · ERD: Customer, Order</span>
+  </div>
+  <div class="sc">
+    <div class="br"><span class="dt"></span><span class="dt"></span><span class="dt"></span><span class="url">/admin/customers</span></div>
+    <div style="flex:1;display:flex;min-height:0">
+      <div class="side"><span class="lg">ניהול</span><span>דשבורד ודוחות</span><span>הזמנות</span><span>מוצרים ומלאי</span><span class="on">לקוחות</span><span>חשבוניות</span><span>משתמשים</span></div>
+      <div style="flex:1;display:flex;gap:10px;padding:12px 14px;min-width:0">
+        <div class="card" style="width:210px;flex:none;display:flex;flex-direction:column;gap:2px;padding:8px">
+          <input class="in" aria-label="חיפוש לקוח" value="" placeholder="חיפוש לפי שם / ח.פ">
+          <div class="li" style="background:#F0F7F7;margin-top:6px"><b>מועדון הגלישה הצפוני</b><small>מועדון · 6 הזמנות</small></div>
+          <div class="li"><b>גלישה בים בע"מ</b><small>בית ספר לגלישה · 3 הזמנות</small></div>
+          <div class="li"><b>מלון החוף</b><small>מלון · 4 הזמנות</small></div>
+          <div class="li"><b>סרף שופ מרכז</b><small>חנות גלישה · 9 הזמנות</small></div>
+          <div class="li"><b>בית ספר גלים</b><small>בית ספר לגלישה · 2 הזמנות</small></div>
+        </div>
+        <div style="flex:1;display:flex;flex-direction:column;gap:8px;min-width:0">
+          <div class="card">
+            <div style="font-weight:800;font-size:15px;margin-bottom:4px">מועדון הגלישה הצפוני</div>
+            <div style="display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 18px">
+              <div class="kv"><span>ח.פ</span><span>58-xxxxxxx-x</span></div>
+              <div class="kv"><span>איש קשר</span><span>[שם]</span></div>
+              <div class="kv"><span>אימייל</span><span style="direction:ltr">club@example.co.il</span></div>
+              <div class="kv"><span>כתובת</span><span>[כתובת]</span></div>
+            </div>
+          </div>
+          <div class="card" style="display:flex;flex-direction:column;gap:6px;border-color:#B9D7D7">
+            <div style="font-weight:700;font-size:13px">אמצעי תשלום מותרים</div>
+            <div style="display:flex;align-items:center;gap:10px;font-size:13px"><span class="sw" aria-hidden="true" style="background:#0E6E73"><span style="left:19px"></span></span>אשראי והעברה בנקאית <span class="tg">ברירת מחדל לכל לקוח</span></div>
+            <div style="display:flex;align-items:center;gap:10px;font-size:13px"><span class="sw" aria-hidden="true" style="background:#0E6E73"><span style="left:19px"></span></span><b>תנאי תשלום מאושרים</b>
+              <label for="nd" style="margin-inline-start:auto;font-size:12px;color:#56636B">ימי אשראי</label><input class="in" id="nd" value="30" style="width:60px"><button class="btn" type="button">שמירה</button></div>
+          </div>
+          <div class="card" style="flex:1">
+            <div style="font-weight:700;font-size:13px;margin-bottom:4px">היסטוריית הזמנות</div>
+            <div class="kv"><span>10471 · 21.11</span><span>14,200 ₪ · שוטף+30 · בטיפול</span></div>
+            <div class="kv"><span>10402 · 05.11</span><span>11,050 ₪ · שוטף+30 · נמסרה</span></div>
+            <div class="kv"><span>10311 · 18.10</span><span>8,400 ₪ · אשראי · נמסרה</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="cp">
+    <div>
+      <h3>מה קורה במסך</h3>
+      <ul>
+        <li>המנהלת בוחרת לקוח, רואה את פרטיו ואת היסטוריית ההזמנות.</li>
+        <li>מפעילה ללקוח תנאי תשלום וקובעת מספר ימים (למשל 30).</li>
+      </ul>
+    </div>
+    <div>
+      <h3>כללים</h3>
+      <ul>
+        <li>מעדכן <b>is_net_terms_approved</b> ו-<b>net_terms_days</b>; משפיע מיד על מסך 5.</li>
+        <li>פתוח: מי מאשר ולפי אילו קריטריונים (מנהלת בלבד, או גם עובד?).</li>
+      </ul>
+    </div>
+  </div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1000,"height":720}}'>
+class Component extends DCLogic {
+  renderVals() { return {}; }
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="utf-8">
+<title>רשימת הזמנות</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;700;800&amp;display=swap">
+<style>
+body{margin:0}
+a{color:#0E6E73}a:hover{color:#0A4F53}
+.pn{width:1000px;height:720px;box-sizing:border-box;background:#FFFFFF;font-family:'Heebo',system-ui,sans-serif;color:#14202B;display:flex;flex-direction:column;direction:rtl}
+.st{display:flex;align-items:center;gap:14px;padding:18px 28px;border-bottom:1px solid #E3E7E8}
+.nm{width:40px;height:40px;border-radius:20px;background:#14202B;color:#fff;font-weight:800;font-size:18px;display:flex;align-items:center;justify-content:center;flex:none}
+.tt{font-size:22px;font-weight:800;margin:0}
+.ch{font-size:13px;font-weight:500;padding:4px 10px;border-radius:999px;background:#ECEAF4;color:#463A73}
+.ref{margin-inline-start:auto;font-size:13px;color:#56636B}
+.sc{margin:20px 28px 0;height:440px;border:1px solid #D5DBDD;border-radius:12px;overflow:hidden;background:#F5F7F7;display:flex;flex-direction:column}
+.br{height:34px;flex:none;display:flex;align-items:center;gap:8px;padding:0 14px;background:#ECEFF0;border-bottom:1px solid #D5DBDD;font-size:12px;color:#56636B}
+.dt{width:9px;height:9px;border-radius:5px;background:#C3CACD}
+.url{margin-inline-start:12px;background:#fff;border-radius:6px;padding:3px 12px;direction:ltr}
+.side{width:148px;flex:none;background:#14202B;color:#C9D3D8;display:flex;flex-direction:column;gap:2px;padding:12px 8px;font-size:13px}
+.side .lg{color:#fff;font-weight:800;font-size:14px;padding:4px 8px 10px}
+.side span{padding:6px 8px;border-radius:6px}
+.side .on{background:#24343F;color:#fff;font-weight:700}
+.cp{flex:1;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:28px;padding:18px 28px 20px}
+.cp h3{margin:0 0 6px;font-size:13px;font-weight:700;color:#0E6E73}
+.cp ul{margin:0;padding-inline-start:18px;font-size:14px;line-height:1.55;color:#2C3940}
+.card{background:#fff;border:1px solid #E3E7E8;border-radius:10px;padding:10px 12px}
+.sel{height:30px;border:1px solid #C9D1D4;border-radius:6px;font:inherit;font-size:12px;background:#fff;padding:0 6px;color:#14202B}
+.tb{width:100%;border-collapse:collapse;font-size:12px}
+.tb th{text-align:right;font-weight:500;color:#56636B;padding:7px 6px;border-bottom:1px solid #E3E7E8}
+.tb td{padding:7px 6px;border-bottom:1px solid #EEF1F2}
+.tg{font-size:11px;font-weight:500;padding:2px 8px;border-radius:999px;display:inline-block}
+.s-new{background:#E4EEFA;color:#1D4E89}
+.s-pro{background:#FFF0D6;color:#7A4600}
+.s-shp{background:#E6F1F1;color:#0A4F53}
+.s-del{background:#E3F2E7;color:#1E6B3A}
+.s-can{background:#EEF0F1;color:#4A555B}
+.p-pen{color:#9B2C1E;font-weight:700}
+</style>
+</helmet>
+<div class="pn">
+  <div class="st">
+    <div class="nm">9</div>
+    <h2 class="tt">רשימת הזמנות עם סינון</h2>
+    <span class="ch">מנהלת / עובד</span>
+    <span class="ref">PRD §6.2 · ERD: Order, Customer</span>
+  </div>
+  <div class="sc">
+    <div class="br"><span class="dt"></span><span class="dt"></span><span class="dt"></span><span class="url">/admin/orders</span></div>
+    <div style="flex:1;display:flex;min-height:0">
+      <div class="side"><span class="lg">ניהול</span><span>דשבורד ודוחות</span><span class="on">הזמנות</span><span>מוצרים ומלאי</span><span>לקוחות</span><span>חשבוניות</span><span>משתמשים</span></div>
+      <div style="flex:1;display:flex;flex-direction:column;gap:8px;padding:12px 14px;min-width:0">
+        <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap"><b style="font-size:15px">הזמנות</b>
+          <span style="margin-inline-start:auto"></span>
+          <select class="sel" aria-label="סטטוס"><option>סטטוס: הכול</option><option>חדשה</option><option>בטיפול</option><option>נשלחה</option><option>נמסרה</option><option>בוטלה</option></select>
+          <select class="sel" aria-label="תשלום"><option>תשלום: הכול</option><option>ממתין</option><option>שולם</option><option>בתנאי תשלום</option></select>
+          <select class="sel" aria-label="תאריך"><option>30 הימים האחרונים</option></select>
+          <select class="sel" aria-label="לקוח"><option>לקוח: הכול</option></select>
+        </div>
+        <div class="card" style="flex:1;padding:2px 8px">
+          <table class="tb">
+            <thead><tr><th>מס'</th><th>לקוח</th><th>תאריך</th><th>סכום</th><th>אמצעי תשלום</th><th>מצב תשלום</th><th>סטטוס</th></tr></thead>
+            <tbody>
+              <tr style="background:#F0F7F7"><td style="font-weight:700"><a href="A4-OrderDetail.dc.html">10482</a></td><td>גלישה בים בע"מ</td><td>24.11</td><td>31,260 ₪</td><td>אשראי</td><td>שולם</td><td><span class="tg s-new">חדשה</span></td></tr>
+              <tr><td style="font-weight:700">10479</td><td>מלון החוף</td><td>23.11</td><td>6,750 ₪</td><td>העברה</td><td class="p-pen">ממתין</td><td><span class="tg s-new">חדשה</span></td></tr>
+              <tr><td style="font-weight:700">10471</td><td>מועדון הגלישה הצפוני</td><td>21.11</td><td>14,200 ₪</td><td>שוטף+30</td><td>בתנאי תשלום</td><td><span class="tg s-pro">בטיפול</span></td></tr>
+              <tr><td style="font-weight:700">10466</td><td>סרף שופ מרכז</td><td>19.11</td><td>22,480 ₪</td><td>אשראי</td><td>שולם</td><td><span class="tg s-shp">נשלחה</span></td></tr>
+              <tr><td style="font-weight:700">10458</td><td>בית ספר גלים</td><td>15.11</td><td>9,300 ₪</td><td>העברה</td><td>שולם</td><td><span class="tg s-del">נמסרה</span></td></tr>
+              <tr><td style="font-weight:700">10450</td><td>מלון החוף</td><td>12.11</td><td>3,200 ₪</td><td>העברה</td><td>—</td><td><span class="tg s-can">בוטלה</span></td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="cp">
+    <div>
+      <h3>מה קורה במסך</h3>
+      <ul>
+        <li>הצוות רואה את כל ההזמנות ומסנן לפי סטטוס, תשלום, תאריך ולקוח.</li>
+        <li>לחיצה על מספר הזמנה פותחת את מסך הטיפול (10).</li>
+      </ul>
+    </div>
+    <div>
+      <h3>כללים</h3>
+      <ul>
+        <li>מצב תשלום נפרד מסטטוס ההזמנה: ממתין / שולם / בתנאי תשלום.</li>
+        <li>העברה בנקאית שלא שולמה מסומנת בבירור לבדיקה ידנית.</li>
+      </ul>
+    </div>
+  </div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1000,"height":720}}'>
+class Component extends DCLogic {
+  renderVals() { return {}; }
+}
+</script>
+</body>
+</html>
